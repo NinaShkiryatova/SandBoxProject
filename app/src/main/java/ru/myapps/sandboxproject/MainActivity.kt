@@ -7,13 +7,14 @@ import androidx.constraintlayout.widget.ConstraintLayout
 
 class MainActivity : AppCompatActivity() {
 
-    val number = 136
+    var number = 136
     lateinit var text: TextView
     lateinit var background: ConstraintLayout
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        number = number*100
         text = findViewById(R.id.text)
         background = findViewById(R.id.background)
         text.setText("Hello, $number!")
